@@ -1,0 +1,110 @@
+.input{
+    width: 250px;
+}
+.bd-placeholder-img{
+    background-image: url(/mitch.JPG);
+}
+.carousel-caption{
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+}
+#car{
+    height: 500px;
+    width: 450px;
+}
+#sunset{
+    height: 550px;
+    width: 450px;
+}
+.container-color{
+    background-color: bisque;
+}
+.volunteer{
+    width:300px;
+}
+#map{
+    height: 400px;
+    width: 100%;
+}
+.QRcode{
+    width: 200px;
+    margin-top:50px;
+}
+.master{
+    background-image: url("sar_logo.jpeg");
+    background-repeat: no-repeat;
+    color:red !important;
+    background-size: cover;
+    height:100%;
+}
+.map{
+    margin-top:350px;
+}
+.air{
+    margin-top: 100px;
+    height: 400px;
+}
+.flipped{
+    height: 400px;
+    width: 300px;
+}
+.highway{
+    height: 400px;
+    width: 300px;
+}
+.tower{
+    height: 400px;
+    width: 300px;
+}
+.downtown{
+    height: 400px;
+    width: 300px;
+}
+.flood{
+    height: 400px;
+    width: 300px;
+}
+.gas{
+    height: 400px;
+    width: 300px;
+}
+.gate{
+    height: 400px;
+    width: 300px;
+}
+.carsdownunder{
+    height: 400px;
+    width: 300px;
+}
+.levee{
+    height: 400px;
+    width: 300px;
+}
+.street{
+    height: 400px;
+    width: 300px;
+}
+.team{
+    height: 400px;
+    width: 300px;
+}
+.submerged{
+    height: 400px;
+    width: 300px;
+}
+.tree{
+    height: 400px;
+    width: 300px;
+}
+.truck{
+    height: 400px;
+    width: 300px;
+}
+.standing{
+    height: 400px;
+    width: 300px;
+}
+.rescue{
+    margin:80px;
+    background-color: cadetblue;
+}

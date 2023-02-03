@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Florida Disaster Rescue</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+</head>
+<body class="bg-light" style="min-height:1400px;" >
+    <div class="container">
+        <div class="py-5 text-center">
+            <img class="mb-4 d-block mx-auto" src="https://cdn.discordapp.com/attachments/1053444184838787102/1068984825609990204/FDR-removebg-preview.png" width="200" height="200">
+            <h2>Donate</h2>
+            <p class="lead">below you may use our secure checkout form</p>
+        </div>
+    </div>
+    <div class="container">
+        <h4 class="mb-3">Billing address</h4>
+        <form novalidate> 
+            <div class="row g-3">
+                <div class="col-sm-6">
+                    <label for="firstname" class="form-label">First Name</label>
+                    <input id="firstname" type="text" class="form-control" placeholder="First Name" required>
+                    <div class="invalid-feedback">Valid First Name is Required
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <label for="lastname" class="form-label">First Name</label>
+                    <input id="lastname" type="text" class="form-control" placeholder="Last Name" required>
+                    <div class="invalid-feedback">Valid last Name is Required
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="username" class="form-label">Username</label>
+                    <div class="input-group">
+                        <span class="input-group-text">@</span>
+                        <input id="username" type="text" class="form-control" placeholder="Username" required>
+                    </div>
+                    <div class="invalid-feedback">
+                        Valid Username is Required
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <label for="country" class="form-label">Country</label>
+                    <select id="country" 
+                    class="form-control">
+                        <option value="">Choose...</option>
+                        <option 
+                        value="United States">United States</option>
+                        <option
+                        value="Canada">Canada</option>
+                        <option value="puerto-rico">puerto Rico</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Valid Username is Required
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <label for="state" class="form-label">State</label>
+                    <select id="State" 
+                    class="form-control">
+                        <option value="">Choose...</option>
+                        <option value="United States">AL</option>
+                        <option value="Canada">AK</option>
+                        <option value="puerto-rico">AZ</option>
+                        <option value="United States">AR</option>
+                        <option value="Canada">CA</option>
+                        <option value="puerto-rico">CO</option>
+                        <option value="United States">CT</option>
+                        <option value="Canada">DE</option>
+                        <option value="puerto-rico">FL</option>
+                        <option value="United States">GA</option>
+                        <option value="Canada">HI</option>
+                        <option value="puerto-rico">ID</option>
+                        <option value="United States">IL</option>
+                        <option value="Canada">IN</option>
+                        <option value="puerto-rico">IA</option>
+                        <option value="United States">KS</option>
+                        <option value="Canada">KY</option>
+                        <option value="puerto-rico">LA</option>
+                        <option value="United States">ME</option>
+                        <option value="Canada">MD</option>
+                        <option value="puerto-rico">MA</option>
+                        <option value="United States">MI</option>
+                        <option value="Canada">MN</option>
+                        <option value="puerto-rico">MS</option>
+                        <option value="United States">MO</option>
+                        <option value="Canada">MT</option>
+                        <option value="puerto-rico">NE</option>
+                        <option value="United States">NV</option>
+                        <option value="Canada">NH</option>
+                        <option value="puerto-rico">NJ</option>
+                        <option value="United States">NM</option>
+                        <option value="Canada">NY</option>
+                        <option value="puerto-rico">NC</option>
+                        <option value="United States">ND</option>
+                        <option value="Canada">OH</option>
+                        <option value="puerto-rico">OK</option>
+                        <option value="United States">OR</option>
+                        <option value="Canada">PA</option>
+                        <option value="puerto-rico">RI</option>
+                        <option value="United States">SC</option>
+                        <option value="Canada">SD</option>
+                        <option value="puerto-rico">TN</option>
+                        <option value="United States">TX</option>
+                        <option value="Canada">UT</option>
+                        <option value="puerto-rico">VT</option>
+                        <option value="United States">VA</option>
+                        <option value="Canada">WA</option>
+                        <option value="puerto-rico">WV</option>
+                        <option value="United States">WI</option>
+                        <option value="Canada">WY</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Valid Username is Required
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label for="zipcode" 
+                    class="form-label">Zip code</label>
+                    <input id="zipcode" type="number"
+                    class="form-control" 
+                    placeholder="zipcode" required>
+                    <div class="invalid-feedback">
+                        Valid Username is Required
+                    </div>
+                </div>
+                <hr class="my-4">
+                <div class="col-12">
+                    <div class="form-check">
+                        <input class="form-check-input" id="sameAddress" type="checkbox">
+                        <label class="form-check-label" for="sameAddress">Shipping address is same as billing</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" id="saveInfo" type="checkbox">
+                        <label class="form-check-label" for="saveInfo">Save my info</label>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+                
+                <h4 class="mb-3">Payment</h4>
+                <div class="form-check">
+                    <input name="paymentmethod" id="creditcard" type="radio" class="form-check-input" checked required>
+                    <label for="creditcard">Credit Card</label>
+                </div>
+                <div class="form-check">
+                    <input name="paymentmethod" id="debitcard" type="radio" class="form-check-input">
+                    <label for="debitcard">Debit Card</label>
+                </div>
+                <div class="form-check">
+                    <input name="paymentmethod" id="PayPal" type="radio" class="form-check-input">
+                    <label for="PayPal">PayPal</label>
+                </div>
+                <div class="row my-3 gy-3">
+                    <div class="col-md-6">
+                        <label for="fullname" class="form-label">Name on card</label>
+                        <input id="fullname" type="text" class="form-control">
+                        <small class="text-muted">
+                            Full name as displayed on card
+                        </small>
+                        <div class="invalid-feedback">
+                            Name on card is required
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="cc-number" class="form-label">Credit card number</label>
+                        <input id="cc-number" type="text" class="form-control">
+
+                        <div class="invalid-feedback">
+                            credit card number is required
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="cc-expire" class="form-label">Expiration</label>
+                        <input id="cc-expire" type="text" class="form-control">
+                        <div class="invalid-feedback">
+                            Expiration is required
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="cc-cvv" class="form-label">CVV</label>
+                        <input id="cc-cvv" type="text" class="form-control">
+                        <div class="invalid-feedback">
+                            CVV is required
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4">
+                <button class="btn btn-primary btn-lg btn-block">Checkout</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
