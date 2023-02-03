@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<meta name="generator" content="Hugo 0.72.0">
+<title>Florida Disaster Rescue</title>
+
+<link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/carousel/">
+
+
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+crossorigin="anonymous"></script>
+
+<style>
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+    }
+}
+
+/* GLOBAL STYLES
+--------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    color: #5a5a5a;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+    margin-bottom: 4rem;
+}
+
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+    height: 32rem;
+}
+
+.carousel-item>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 32rem;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.marketing h2 {
+    font-weight: 400;
+}
+
+.marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+    margin: 5rem 0;
+    /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -.05rem;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+    margin-bottom: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    }
+
+    .featurette-heading {
+    font-size: 50px;
+    }
+}
+
+@media (min-width: 62em) {
+    .featurette-heading {
+    margin-top: 7rem;
+    }
+}
+</style>
+
+
+<!-- Custom styles for this template -->
+<link href="carousel.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#">Florida Disaster Rescue</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto mb-2 mb-md-0">
+        <li class="nav-item active">
+            <a class="nav-link" aria-current="page" href="/about">About Us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/donate">Donate</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/volunteer">Volunteer</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/contact" tabindex="-1" aria-disabled="true">Contact Us</a>
+        </li>
+        </ul>
+        <form class="d-flex">
+        <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </div>
+    </div>
+</nav>
+</header>
+
+<main>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img src="{{url_for('static', filename='/img/chaos.jpg')}}" alt="test image">
+
+        <div class="container">
+        <div class="carousel-caption">
+            <h1>VOLUNTEER With FDR</h1>
+            <p>Volunteer for with us! We have been all over the continental United States and outside the United States to assist with many storms and disasters. Volunteer from afar with a dispatcher role or come on the ground and see the change you make in the community</p>
+            <p><a class="btn btn-lg btn-primary" href="/volunteer" role="button">Sign up today</a></p>
+        </div>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <img src="{{url_for('static', filename='/img/drone.jpg')}}" alt="test image">
+
+        <div class="container">
+        <div class="carousel-caption">
+            <h1>Donations Accepted</h1>
+            <p>We do accept clothing, non-perishable foods, and cash donations. Why donate to us? We make sure every donor is able to see just where their donations go whether it is equipment to be better suited for disasters or food and clothing to those that have lost so much.</p>
+            <p><a class="btn btn-lg btn-primary" href="/donate" role="button">Learn more</a></p>
+        </div>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <img src="{{url_for('static', filename='/img/streetflood.jpg')}}" alt="test image">
+
+        <div class="container">
+        <div class="carousel-caption">
+            <h1>Want to see more?</h1>
+            <p>see for yourself when disaster strikes, Florida Disaster Rescue is on scene and ready to come to your neighborhood on moments notice and provide aid.</p>
+            <p><a class="btn btn-lg btn-primary" href="/photo" role="button">Browse gallery</a></p>
+        </div>
+        </div>
+    </div>
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+<!-- Marketing messaging and featurettes
+================================================== -->
+<!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="container marketing">
+
+    <!-- Three columns of text below the carousel Add in Photos-->
+    <div class="row">
+    <div class="col-lg-4">
+        <img src="{{url_for('static', filename='/img/mitch.jpg')}}" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg">
+        <title>Placeholder</title>
+        <h2>Mitchell Brasher</h2>
+        <p>Mitchell has been working Search and Rescue since Hurricane Michael in 2018. When this hurricane devasted Florida, volunteers came together to assist in rescue and recovery efforts</p>
+        <p><a class="btn btn-secondary" href="/templates/about.html" role="button">View details &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+        <img src="{{url_for('static', filename='/img/drew.jpg')}}" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg">
+
+            <!-- Add photo of yourself -->
+
+        <h2>Andrew Yee</h2>
+        <p>Andrew is a former US Army combat medic that got involved after Hurricane Irma in 2017. His love for helping others and assisting them in any way possible shows in his work and willingness to go above and beyond what others would do</p>
+        <p><a class="btn btn-secondary" href="/about" role="button">View details &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+        <img src="{{url_for('static', filename='/img/josh.jpg')}}" class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg">
+
+        <h2>Josh Keffer</h2>
+        <p>Josh keffer is a traveling nurse that got involved during hurricane Michael where he met Andrew and Mitch. He has since taken up a logistical role due to his work duties.</p>
+        <p><a class="btn btn-secondary" href="/about" role="button">View details &raquo;</a></p>
+    </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+    <div class="col-md-7">
+        <h2 class="featurette-heading">How to get Involved<span class="text-muted"></span>
+        </h2>
+        <p class="lead"><p>There are many ways to help us with our mission. You can donate money to help us with our mission. You can also volunteer with us. We are always looking for volunteers to help us with our mission. If you would like to volunteer with us <a href="/volunteer">click </a>above and fill out our volunteer form. We will contact you as soon as possible.</p></p>
+    </div>
+    <div class="col-md-5">
+        <img src="{{url_for('static', filename='/img/chaos.jpg')}}" alt="test image">
+    </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="row featurette">
+    <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading"><p>Our Promise<span class="text-muted"> to help our community</span></h2>
+        <p class="lead">to assist local and state governments in the rescue and recovery process after a natural disaster. We are a 501c(3) non-profit organization that is dedicated to helping others. We are a team of volunteers that come together and bond over many sleepless nights to help our community. We are always looking for volunteers to help us with our mission. If you would like to volunteer with us <a href="/volunteer">click </a>above and fill out our volunteer form. If you would like to make a donation you may do so with this <a href="/donate">link</a></p>
+    </div>
+    <div class="col-md-5 order-md-1">
+        <img id="car" src="{{url_for('static', filename='/img/car.jpg')}}" alt="test image">
+    </div>
+    </div>
+
+    <hr class="featurette-divider">
+    <div class="row featurette">
+    <div class="col-md-7">
+        <h2 class="featurette-heading">About Us<span class="text-muted"> and where we go...</span></h2>
+        <p class="lead"><p>Florida Disaster Rescue was founded in 2018 by a group of volunteers that wanted to help others in need. We have responded to many hurricanes including Irma, Michael, Sally, Laura, Dorian to Ian (2022) and the eathquake in Haiti as well as the structure collapse in Miami in 2021. </p>We have been working all around the world helping countries repair themselves after natural disasters like Puerto Rico. We are dedicated to helping others 24 hours a day / 7 days a week whether we are getting trapped families out of a flooded home or whether it is cooking food and doing local food drives to those affected in anyway. Florida Disaster Rescue's team is comprised of highly motivated individuals who put the needs of others above all else, when a disaster occurs they are some of the first people to jump into action. They are committed to training and preparing constantly. When Florida Disaster Rescue is not out in the field, they are working in the background to help coordinate supplies and recovery efforts. We hope  we are never needed in your community, however if in the event we are, you can reach us <a href="/contact">here</a> rest assured you will have some of the best and hardest working individuals to help you along.</p>
+    </div>
+    <div class="col-md-5">
+        <img id="sunset" src="{{url_for('static', filename='/img/sunset.jpg')}}" alt="test image">
+
+    </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+</div><!-- /.container -->
+
+
+<!-- FOOTER -->
+<footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>&copy; 2018-2023 Florida Disaster Rescue Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+</footer>
+</main>
+
+
+
+</body>
+
+</html>
+</body>
+</div> -->
