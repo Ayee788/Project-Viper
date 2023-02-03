@@ -17,35 +17,33 @@
     </div>
     <div class="container">
         <h4 class="mb-3">volunteer registration</h4>
-        <form novalidate> 
+        <form action="/volunteer_submit" method="post" novalidate> 
             <div class="row g-3">
                 <div class="col-md-3">
                     <label for="firstname" class="form-label">First Name</label>
-                    <input id="firstname" type="text" class="form-control" placeholder="First Name" required>
-                    <div class="invalid-feedback">Valid First Name is Required
-                    </div>
+                    <input name="first_name" type="text" class="form-control" placeholder="First Name" required>
+                    <div class="invalid-feedback">Valid First Name is Required</div>
                 </div>
                 <div class="col-md-3">
                     <label for="lastname" class="form-label">Last Name</label>
-                    <input id="lastname" type="text" class="form-control" placeholder="Last Name" required>
-                    <div class="invalid-feedback">Valid last Name is Required
-                    </div>
+                    <input name="last_name" type="text" class="form-control" placeholder="Last Name" required>
+                    <div class="invalid-feedback">Valid last Name is Required</div>
                 </div>
                 <div class="col-md-3">
                     <label for="email" class="form-label">Email</label>
-                    <input id="email" type="text" class="form-control" placeholder="Email" required>
+                    <input name="email" type="text" class="form-control" placeholder="Email" required>
                     <div class="invalid-feedback">Valid email is Required
                     </div>
                 </div>
                 <div class="col-md-3">
                     <label for="phone" class="form-label">Phone number</label>
-                    <input id="phone" type="text" class="form-control" placeholder="Email" required>
+                    <input name="phone" type="text" class="form-control" placeholder="Email" required>
                     <div class="invalid-feedback">Valid phone number is Required
                     </div>
                 </div>
                 <h4 class="mb-3">What are you interested in doing?</h4>
                 <div class="form-check">
-                    <input name="activities" id="activities" type="radio" class="form-check-input" checked required>
+                    <input name="activities" eq="activities" type="radio" class="form-check-input" checked required>
                     <label for="activities">Ground Team</label>
                 </div>
                 <div class="form-check">

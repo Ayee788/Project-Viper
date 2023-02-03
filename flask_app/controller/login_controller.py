@@ -1,12 +1,10 @@
 from flask import render_template,redirect,session,request,flash
 from flask_app import app
-from flask_app.models.login_model import User
+from flask_app.models.login_model import Volunteer
 import os
-# from flask_app.models.recipe_model import Recipe
 from flask_bcrypt import Bcrypt
 bcrypt = Bcrypt(app)
-# this is where we will import our models 
-import stripe
+# this is where we will import our models and connect them to our routes
 
 @app.route('/')
 def index():
@@ -28,6 +26,18 @@ def donate():
 @app.route('/volunteer')
 def volunteer():
     return render_template('volunteer.html')
+
+@app.route('/volunteer_submit', methods=['POST'])
+def volunteer_submit():
+    data ={
+        'first_name': request.form['first_name'],
+        'last_name': request.form['last_name'],
+        'email': request.form['email'],
+        'phone': request.form['phone']
+    }
+    print(request.form)
+    Volunteer.save(data)
+    return redirect('/')
 
 @app.route('/photo')
 def photo():
