@@ -78,3 +78,30 @@ class Volunteer:
     #         flash('This email is taken please select another email','register')
         
     #     return is_valid
+    
+    # add a class method to query the database and return all volunteers and their information
+    @classmethod
+    def get_all_volunteers(cls):
+        query = 'SELECT * FROM volunteers;'
+        results = connectToMySQL(DATABASE).query_db(query)
+        volunteers = []
+        for volunteer in results:
+            volunteers.append(cls(volunteer))
+        return volunteers
+    # add a class method to query the database and return one volunteer and their information
+    @classmethod
+    def get_one_volunteer(cls,data):
+        query = 'SELECT * FROM volunteers WHERE id = %(id)s;'
+        result = connectToMySQL(DATABASE).query_db(query,data)
+        return cls(result[0])
+    # add a class method to query the database and update one volunteer and their information
+    @classmethod
+    def update_volunteer(cls,data):
+        query = 'UPDATE volunteers SET first_name = %(first_name)s, last_name = %(last_name)s, email = %(email)s, phone = %(phone)s WHERE id = %(id)s;'
+        return connectToMySQL(DATABASE).query_db(query,data)
+    # add a class method to query the database and delete one volunteer and their information
+    @classmethod
+    def delete_volunteer(cls,data):
+        query = 'DELETE FROM volunteers WHERE id = %(id)s;'
+        return connectToMySQL(DATABASE).query_db(query,data)    
+    # add more models and controllers as needed

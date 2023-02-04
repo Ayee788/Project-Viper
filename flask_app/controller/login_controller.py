@@ -42,3 +42,5 @@ def volunteer_submit():
 @app.route('/photo')
 def photo():
     return render_template('photo_gallery.html')
+
+# add login and registration routes and logic
